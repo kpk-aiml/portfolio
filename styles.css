@@ -118,6 +118,9 @@ body {
   border: 1px solid var(--brand);
   border-radius: 999px;
   padding: 0.28rem 0.72rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .label-short {
@@ -710,16 +713,22 @@ h1 {
   .nav {
     gap: 0.42rem;
     font-size: 0.82rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: flex-start;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
     padding-bottom: 0.2rem;
   }
 
   .nav a.nav-cta {
     font-size: 0.74rem;
     padding: 0.2rem 0.44rem;
+  }
+
+  .nav a.nav-contact,
+  .nav a.nav-resume {
+    flex: 1 1 calc(50% - 0.22rem);
+    text-align: center;
   }
 
   .top-social {
@@ -795,6 +804,16 @@ h1 {
 
   .label-short {
     display: inline;
+  }
+
+  .nav a.nav-contact .label-long,
+  .nav a.nav-resume .label-long {
+    display: inline;
+  }
+
+  .nav a.nav-contact .label-short,
+  .nav a.nav-resume .label-short {
+    display: none;
   }
 
   .nav {
